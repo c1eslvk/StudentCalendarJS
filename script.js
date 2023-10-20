@@ -60,3 +60,25 @@ function initCalendar() {
 }
 
 initCalendar();
+
+function prevMonth() {
+    month--;
+    if (month < 0) {
+        month = 11;
+        year--;
+    }
+    initCalendar();
+}
+
+function nextMonth() {
+    month++;
+    if (month > 11) {
+        month = 0;
+        year++;
+    }
+    initCalendar();
+}
+
+prev.addEventListener("click", prevMonth);
+next.addEventListener("click", nextMonth);
+
