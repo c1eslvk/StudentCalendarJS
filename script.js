@@ -61,13 +61,13 @@ console.log(eventsArr);
 
 //function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
 function initCalendar() {
-  const firstDay = new Date(year, month, 1);
+  const firstDay = new Date(year, month, 0);
   const lastDay = new Date(year, month + 1, 0);
   const prevLastDay = new Date(year, month, 0);
   const prevDays = prevLastDay.getDate();
   const lastDate = lastDay.getDate();
   const day = firstDay.getDay();
-  const nextDays = 7 - lastDay.getDay() - 1;
+  const nextDays = 7 - lastDay.getDay();
 
   date.innerHTML = months[month] + " " + year;
 
