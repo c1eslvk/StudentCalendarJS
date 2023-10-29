@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Arial", sans-serif;
   }
   /* nice scroll bar */
   ::-webkit-scrollbar {
@@ -56,24 +56,6 @@
     color: #958787;
     border-radius: 5px;
     background-color: #fff;
-  }
-  /* set after behind the main element */
-  .calendar::before,
-  .calendar::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 12px;
-    height: 97%;
-    border-radius: 0 5px 5px 0;
-    background-color: #d3d4d6d7;
-    transform: translateY(-50%);
-  }
-  .calendar::before {
-    height: 94%;
-    left: calc(100% + 12px);
-    background-color: rgb(153, 153, 153);
   }
   .calendar .month {
     width: 100%;
@@ -132,7 +114,9 @@
     justify-content: center;
     cursor: pointer;
     color: var(--primary-clr);
-    border: 1px solid #f5f5f5;
+    border: transparent;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
   }
   .calendar .days .day:nth-child(7n + 1) {
     border-left: 2px solid #f5f5f5;
@@ -168,7 +152,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 10px 5px var(--primary-clr);
+    box-shadow: 0 0 10px 2px var(--primary-clr);
+    border-radius: 20px;
   }
   .calendar .days .today {
     font-size: 2rem;
@@ -181,7 +166,7 @@
     position: absolute;
     bottom: 10%;
     left: 50%;
-    width: 75%;
+    width: 40%;
     height: 6px;
     border-radius: 30px;
     transform: translateX(-50%);
@@ -228,10 +213,11 @@
   .calendar .goto-today button {
     padding: 5px 10px;
     border: 1px solid var(--primary-clr);
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: transparent;
     cursor: pointer;
     color: var(--primary-clr);
+    transition: background-color 0.3s, color 0.3s;
   }
   .calendar .goto-today button:hover {
     color: #fff;
@@ -248,7 +234,6 @@
     min-height: 100%;
     padding: 20px 0;
   }
-  
   .right .today-date {
     width: 100%;
     height: 50px;
@@ -341,7 +326,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0.3;
+    opacity: 0.6;
     color: var(--primary-clr);
     transform: translateY(-50%);
   }
@@ -351,7 +336,7 @@
   .add-event {
     position: absolute;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     width: 40px;
     height: 40px;
     display: flex;
