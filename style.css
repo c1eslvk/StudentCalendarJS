@@ -37,11 +37,9 @@
     padding: 5px;
     color: #fff;
     display: flex;
-  
-    border-radius: 10px;
-    background-color: #352828;
+    background: linear-gradient(to right, #352828 40%, #e2e1dc 40%);
   }
-  .left {
+  .right {
     width: 60%;
     padding: 20px;
   }
@@ -56,6 +54,7 @@
     color: #958787;
     border-radius: 5px;
     background-color: #fff;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
   }
   .calendar .month {
     width: 100%;
@@ -228,13 +227,13 @@
     border-left: 1px solid var(--primary-clr);
     border-radius: 0;
   }
-  .container .right {
+  .container .left {
     position: relative;
     width: 40%;
     min-height: 100%;
     padding: 20px 0;
   }
-  .right .today-date {
+  .left .today-date {
     width: 100%;
     height: 50px;
     display: flex;
@@ -248,11 +247,11 @@
     margin-bottom: 20px;
     text-transform: capitalize;
   }
-  .right .today-date .event-day {
+  .left .today-date .event-day {
     font-size: 2rem;
     font-weight: 500;
   }
-  .right .today-date .event-date {
+  .left .today-date .event-date {
     font-size: 1rem;
     font-weight: 400;
     color: #dd8383;
@@ -474,12 +473,12 @@
       flex-direction: column;
       border-radius: 0;
     }
-    .container .left {
+    .container .right {
       width: 100%;
       height: 100%;
       padding: 20px 0;
     }
-    .container .right {
+    .container .left {
       width: 100%;
       height: 100%;
       padding: 20px 0;
@@ -519,7 +518,7 @@
     .calendar .days .day.today {
       font-size: 1rem;
     }
-    .right .today-date {
+    .left .today-date {
       padding: 20px;
     }
   }
