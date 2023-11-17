@@ -32,12 +32,11 @@
   .container {
     position: relative;
     width: 1200px;
-    height: 700px;
+    height: 680px;
     margin: 0 auto;
     padding: 5px;
     color: #fff;
     display: flex;
-    background: linear-gradient(to right, #352828 40%, #e2e1dc 40%);
   }
   .right {
     width: 60%;
@@ -230,8 +229,12 @@
   .container .left {
     position: relative;
     width: 40%;
-    min-height: 100%;
     padding: 20px 0;
+    height: 650px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #352828;
   }
   .left .today-date {
     width: 100%;
@@ -334,7 +337,7 @@
   }
   .add-event {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 30px;
     width: 40px;
     height: 40px;
